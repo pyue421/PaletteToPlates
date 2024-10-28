@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, ImageBackground, TextInput, Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import styles from './styles'; // Adjust the path if needed
+import styles from './styles'; 
 
-const backgroundImage = require('./assets/plate.webp'); // Adjust path
+const backgroundImage = require('./assets/plate.webp'); 
 
 const HomeScreen = ({ navigation }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''); //takes text input
 
   const handleSearch = () => {
     navigation.navigate('SearchResults', { query: searchQuery });
@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation }) => {
     const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
     if (permissionResult.granted === false) {
-      Alert.alert('Permission to access camera roll is required!');
+      Alert.alert('Permission to access camera roll is required');
       return;
     }
 
@@ -33,11 +33,11 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const handleSavedRecipes = () => {
-    Alert.alert('Saved Recipes pressed!');
+    Alert.alert('Saved Recipes pressed!'); //need change
   };
 
   const handleProfile = () => {
-    Alert.alert('Profile pressed!');
+    Alert.alert('Profile pressed!'); //need change 
   };
 
   return (
@@ -50,17 +50,18 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.subHeading}>Eat the Art!</Text>
         
         {/* Search Input */}
-        <View style={styles.searchContainer}>
+        <View style={[styles.searchContainer, { flexDirection: 'row', alignItems: 'center' }]}>
           <TextInput
-            style={styles.searchInput}
+            style={[styles.searchInput, { flex: 1 }]} //takes up remaining space
             placeholder="Search for artwork..."
             value={searchQuery}
             onChangeText={setSearchQuery}
           />
-          <TouchableOpacity style={styles.uploadButton} onPress={handleSearch}>
-            <Text style={styles.uploadButtonText}>Search Artwork</Text>
+          <TouchableOpacity style={[styles.uploadButton, { marginLeft: 10 }]} onPress={handleSearch}>
+            <Text style={styles.uploadButtonText}>Search</Text>
           </TouchableOpacity>
         </View>
+
 
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.uploadButton} onPress={handleUpload}>
