@@ -30,8 +30,19 @@ container: {
     alignItems: 'center',
     width: '100%',
   },
+  searchButton: {
+    backgroundColor: '#1a0b0b', 
+    borderColor: '#141213',
+    borderWidth: 1,
+    borderRadius: 25,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
+    marginVertical: 10,
+    width: '35%',
+    alignItems: 'center',
+  },
   uploadButton: {
-    backgroundColor: '#1a0b0b', // Green background for Search
+    backgroundColor: '#00000000', 
     borderColor: '#141213',
     borderWidth: 1,
     borderRadius: 25,
@@ -42,7 +53,7 @@ container: {
     alignItems: 'center',
   },
   savedRecipesButton: {
-    backgroundColor: '#00000000', // Orange background for Saved Recipes
+    backgroundColor: '#00000000', 
     borderColor: '#141213',
     borderWidth: 1,
     borderRadius: 25,
@@ -53,7 +64,7 @@ container: {
     alignItems: 'center',
   },
   profileButton: {
-    backgroundColor: '#00000000', // Blue background for Profile
+    backgroundColor: '#00000000', 
     borderColor: '#141213',
     borderWidth: 1,
     borderRadius: 25,
@@ -63,16 +74,20 @@ container: {
     width: '80%',
     alignItems: 'center',
   },
+  searchButtonText: {
+    color: '#ffffff', 
+    fontSize: 16,
+  },
   uploadButtonText: {
-    color: '#ffffff', // Red text for Upload Artwork button
+    color: '#141213', 
     fontSize: 16,
   },
   savedRecipesButtonText: {
-    color: '#141213', // Green text for Saved Recipes button
+    color: '#141213', 
     fontSize: 16,
   },
   profileButtonText: {
-    color: '#141213', // Blue text for Profile button
+    color: '#141213', 
     fontSize: 16,
   },
 });

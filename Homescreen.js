@@ -57,8 +57,8 @@ const HomeScreen = ({ navigation }) => {
             value={searchQuery}
             onChangeText={setSearchQuery}
           />
-          <TouchableOpacity style={[styles.uploadButton, { marginLeft: 10 }]} onPress={handleSearch}>
-            <Text style={styles.uploadButtonText}>Search</Text>
+          <TouchableOpacity style={[styles.searchButton, { marginLeft: 10 }]} onPress={handleSearch}>
+            <Text style={styles.searchButtonText}>Search</Text>
           </TouchableOpacity>
         </View>
 
